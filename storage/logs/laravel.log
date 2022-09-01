@@ -1,0 +1,796 @@
+[2022-08-30 16:12:54] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `sessions` where `id` = ABClkB9yYzNZsFLeSWCoZWwX5rLc7sqRhO17MBEL limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) (SQL: select * from `sessions` where `id` = ABClkB9yYzNZsFLeSWCoZWwX5rLc7sqRhO17MBEL limit 1) at C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:759)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(719): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(421): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2630): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2618): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3154): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2619): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(296): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2554): Illuminate\\Database\\Query\\Builder->first(Array)
+#8 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\DatabaseSessionHandler.php(97): Illuminate\\Database\\Query\\Builder->find('ABClkB9yYzNZsFL...')
+#9 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Store.php(110): Illuminate\\Session\\DatabaseSessionHandler->read('ABClkB9yYzNZsFL...')
+#10 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Store.php(98): Illuminate\\Session\\Store->readFromHandler()
+#11 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Store.php(82): Illuminate\\Session\\Store->loadSession()
+#12 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(147): Illuminate\\Session\\Store->start()
+#13 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(302): Illuminate\\Session\\Middleware\\StartSession->Illuminate\\Session\\Middleware\\{closure}(Object(Illuminate\\Session\\Store))
+#14 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(148): tap(Object(Illuminate\\Session\\Store), Object(Closure))
+#15 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(116): Illuminate\\Session\\Middleware\\StartSession->startSession(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store))
+#16 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#17 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(726): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#24 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(703): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#25 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(667): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#26 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(656): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#27 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#28 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#47 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#48 C:\\xampp\\htdocs\\ConstructoraDashboard\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#49 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#50 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) at C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '123456', Array)
+#1 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '123456', Array)
+#2 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1168): call_user_func(Object(Closure))
+#6 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1204): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(485): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(413): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(752): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#10 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(719): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(421): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#12 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2630): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#13 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2618): Illuminate\\Database\\Query\\Builder->runSelect()
+#14 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3154): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#15 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2619): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#16 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(296): Illuminate\\Database\\Query\\Builder->get(Array)
+#17 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2554): Illuminate\\Database\\Query\\Builder->first(Array)
+#18 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\DatabaseSessionHandler.php(97): Illuminate\\Database\\Query\\Builder->find('ABClkB9yYzNZsFL...')
+#19 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Store.php(110): Illuminate\\Session\\DatabaseSessionHandler->read('ABClkB9yYzNZsFL...')
+#20 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Store.php(98): Illuminate\\Session\\Store->readFromHandler()
+#21 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Store.php(82): Illuminate\\Session\\Store->loadSession()
+#22 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(147): Illuminate\\Session\\Store->start()
+#23 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(302): Illuminate\\Session\\Middleware\\StartSession->Illuminate\\Session\\Middleware\\{closure}(Object(Illuminate\\Session\\Store))
+#24 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(148): tap(Object(Illuminate\\Session\\Store), Object(Closure))
+#25 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(116): Illuminate\\Session\\Middleware\\StartSession->startSession(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store))
+#26 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#27 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(726): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(703): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(667): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(656): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#57 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#58 C:\\xampp\\htdocs\\ConstructoraDashboard\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#59 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#60 {main}
+"} 
+[2022-08-30 17:16:56] local.ERROR: Route [home] not defined. {"view":{"view":"C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\resources\\views\\partials\\navbar\\navbar.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1293263858 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#458</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1293263858\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","adminlte":"<pre class=sf-dump id=sf-dump-694352008 data-indent-pad=\"  \"><span class=sf-dump-note>JeroenNoten\\LaravelAdminLte\\AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref21409 title=\"6 occurrences\">#1409</a><samp data-depth=1 id=sf-dump-694352008-ref21409 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">menu</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">filters</span>: <span class=sf-dump-note>array:7</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"51 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\GateFilter</span>\"
+    <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"51 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter</span>\"
+    <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"53 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\SearchFilter</span>\"
+    <span class=sf-dump-index>3</span> => \"<span class=sf-dump-str title=\"53 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\ActiveFilter</span>\"
+    <span class=sf-dump-index>4</span> => \"<span class=sf-dump-str title=\"54 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\ClassesFilter</span>\"
+    <span class=sf-dump-index>5</span> => \"<span class=sf-dump-str title=\"51 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\LangFilter</span>\"
+    <span class=sf-dump-index>6</span> => \"<span class=sf-dump-str title=\"51 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\DataFilter</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">events</span>: <span class=sf-dump-note title=\"Illuminate\\Events\\Dispatcher
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Events</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Dispatcher</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref226 title=\"5 occurrences\">#26</a><samp data-depth=2 id=sf-dump-694352008-ref226 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">container</span>: <span class=sf-dump-note title=\"Illuminate\\Foundation\\Application
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Application</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref23 title=\"94 occurrences\">#3</a><samp data-depth=3 id=sf-dump-694352008-ref23 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">resolved</span>: <span class=sf-dump-note>array:75</span> [ &#8230;75]
+      #<span class=sf-dump-protected title=\"Protected property\">bindings</span>: <span class=sf-dump-note>array:104</span> [ &#8230;104]
+      #<span class=sf-dump-protected title=\"Protected property\">methodBindings</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">instances</span>: <span class=sf-dump-note>array:51</span> [ &#8230;51]
+      #<span class=sf-dump-protected title=\"Protected property\">scopedInstances</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">aliases</span>: <span class=sf-dump-note>array:79</span> [ &#8230;79]
+      #<span class=sf-dump-protected title=\"Protected property\">abstractAliases</span>: <span class=sf-dump-note>array:42</span> [ &#8230;42]
+      #<span class=sf-dump-protected title=\"Protected property\">extenders</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">tags</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">buildStack</span>: <a class=sf-dump-ref>&amp;</a> []
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: <a class=sf-dump-ref>&amp;</a> []
+      +<span class=sf-dump-public title=\"Public property\">contextual</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">reboundCallbacks</span>: <span class=sf-dump-note>array:3</span> [ &#8230;3]
+      #<span class=sf-dump-protected title=\"Protected property\">globalBeforeResolvingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">globalResolvingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">globalAfterResolvingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">beforeResolvingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">resolvingCallbacks</span>: <span class=sf-dump-note>array:2</span> [ &#8230;2]
+      #<span class=sf-dump-protected title=\"Protected property\">afterResolvingCallbacks</span>: <span class=sf-dump-note>array:5</span> [ &#8230;5]
+      #<span class=sf-dump-protected title=\"Protected property\">basePath</span>: \"<span class=sf-dump-str title=\"37 characters\">C:\\xampp\\htdocs\\ConstructoraDashboard</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">hasBeenBootstrapped</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">booted</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">bootingCallbacks</span>: <a class=sf-dump-ref>&amp;</a> <span class=sf-dump-note>array:2</span> [ &#8230;2]
+      #<span class=sf-dump-protected title=\"Protected property\">bootedCallbacks</span>: <a class=sf-dump-ref>&amp;</a> <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">terminatingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">serviceProviders</span>: <a class=sf-dump-ref>&amp;</a> <span class=sf-dump-note>array:35</span> [ &#8230;35]
+      #<span class=sf-dump-protected title=\"Protected property\">loadedProviders</span>: <span class=sf-dump-note>array:35</span> [ &#8230;35]
+      #<span class=sf-dump-protected title=\"Protected property\">deferredServices</span>: <span class=sf-dump-note>array:126</span> [ &#8230;126]
+      #<span class=sf-dump-protected title=\"Protected property\">appPath</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">databasePath</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">langPath</span>: \"<span class=sf-dump-str title=\"42 characters\">C:\\xampp\\htdocs\\ConstructoraDashboard\\lang</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">storagePath</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">environmentPath</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">environmentFile</span>: \"<span class=sf-dump-str title=\"4 characters\">.env</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">isRunningInConsole</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">namespace</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">absoluteCachePathPrefixes</span>: <span class=sf-dump-note>array:2</span> [ &#8230;2]
+    </samp>}
+    #<span class=sf-dump-protected title=\"Protected property\">listeners</span>: <span class=sf-dump-note>array:9</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>composing: adminlte::page</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>JeroenNoten\\LaravelAdminLte\\Events\\BuildingMenu</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Foundation\\Events\\LocaleUpdated</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Log\\Events\\MessageLogged</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Database\\Events\\QueryExecuted</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Queue\\Events\\JobExceptionOccurred</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Queue\\Events\\JobProcessing</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Queue\\Events\\JobProcessed</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Auth\\Events\\Registered</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">wildcards</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">wildcardsCache</span>: <span class=sf-dump-note>array:33</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\LoadEnvironmentVariables</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\LoadEnvironmentVariables</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\LoadConfiguration</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\LoadConfiguration</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\HandleExceptions</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\HandleExceptions</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\RegisterFacades</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\RegisterFacades</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\RegisterProviders</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\RegisterProviders</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\BootProviders</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\BootProviders</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Routing\\Events\\Routing</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Routing\\Events\\RouteMatched</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Database\\Events\\StatementPrepared</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Database\\Events\\QueryExecuted</span>\" => []
+      \"<span class=sf-dump-key>eloquent.booting: App\\Models\\User</span>\" => []
+      \"<span class=sf-dump-key>eloquent.booted: App\\Models\\User</span>\" => []
+      \"<span class=sf-dump-key>eloquent.retrieved: App\\Models\\User</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Auth\\Events\\Authenticated</span>\" => []
+      \"<span class=sf-dump-key>creating: dash.index</span>\" => []
+      \"<span class=sf-dump-key>composing: dash.index</span>\" => []
+      \"<span class=sf-dump-key>creating: adminlte::page</span>\" => []
+      \"<span class=sf-dump-key>composing: adminlte::page</span>\" => []
+      \"<span class=sf-dump-key>JeroenNoten\\LaravelAdminLte\\Events\\ReadingDarkModePreference</span>\" => []
+      \"<span class=sf-dump-key>creating: adminlte::partials.common.preloader</span>\" => []
+      \"<span class=sf-dump-key>composing: adminlte::partials.common.preloader</span>\" => []
+      \"<span class=sf-dump-key>creating: adminlte::partials.navbar.navbar</span>\" => []
+      \"<span class=sf-dump-key>composing: adminlte::partials.navbar.navbar</span>\" => []
+      \"<span class=sf-dump-key>creating: adminlte::partials.navbar.menu-item-left-sidebar-toggler</span>\" => []
+      \"<span class=sf-dump-key>composing: adminlte::partials.navbar.menu-item-left-sidebar-toggler</span>\" => []
+      \"<span class=sf-dump-key>JeroenNoten\\LaravelAdminLte\\Events\\BuildingMenu</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Auth\\Access\\Events\\GateEvaluated</span>\" => []
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">queueResolver</span>: <span class=sf-dump-note>Closure()</span> {<a class=sf-dump-ref>#27</a><samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-meta>class</span>: \"<span class=sf-dump-str title=\"Illuminate\\Events\\EventServiceProvider
+38 characters\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-class\">Illuminate\\Events</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-class\">\\</span>EventServiceProvider</span>\"
+      <span class=sf-dump-meta>this</span>: <span class=sf-dump-note title=\"Illuminate\\Events\\EventServiceProvider
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Events</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>EventServiceProvider</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref25 title=\"3 occurrences\">#5</a> &#8230;}
+      <span class=sf-dump-meta>use</span>: { &#8230;1}
+      <span class=sf-dump-meta>file</span>: \"<span class=sf-dump-str title=\"C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\EventServiceProvider.php
+109 characters\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">\\laravel\\framework\\</span>src\\Illuminate\\Events\\EventServiceProvider.php</span>\"
+      <span class=sf-dump-meta>line</span>: \"<span class=sf-dump-str title=\"8 characters\">18 to 20</span>\"
+    </samp>}
+  </samp>}
+  #<span class=sf-dump-protected title=\"Protected property\">container</span>: <span class=sf-dump-note title=\"Illuminate\\Foundation\\Application
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Application</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref23 title=\"94 occurrences\">#3</a>}
+  #<span class=sf-dump-protected title=\"Protected property\">menuFilterMap</span>: <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>sidebar</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"JeroenNoten\\LaravelAdminLte\\AdminLte
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">JeroenNoten\\LaravelAdminLte</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref21409 title=\"6 occurrences\">#1409</a>}
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">sidebarFilter</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>navbar-left</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"JeroenNoten\\LaravelAdminLte\\AdminLte
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">JeroenNoten\\LaravelAdminLte</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref21409 title=\"6 occurrences\">#1409</a>}
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"16 characters\">navbarLeftFilter</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>navbar-right</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"JeroenNoten\\LaravelAdminLte\\AdminLte
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">JeroenNoten\\LaravelAdminLte</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref21409 title=\"6 occurrences\">#1409</a>}
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"17 characters\">navbarRightFilter</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>navbar-user</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"JeroenNoten\\LaravelAdminLte\\AdminLte
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">JeroenNoten\\LaravelAdminLte</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-694352008-ref21409 title=\"6 occurrences\">#1409</a>}
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"20 characters\">navbarUserMenuFilter</span>\"
+    </samp>]
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-694352008\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","layoutHelper":"<pre class=sf-dump id=sf-dump-1025180092 data-indent-pad=\"  \"><span class=sf-dump-note>JeroenNoten\\LaravelAdminLte\\Helpers\\LayoutHelper</span> {<a class=sf-dump-ref>#1408</a>}
+</pre><script>Sfdump(\"sf-dump-1025180092\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":1,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [home] not defined. at C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Filters\\HrefFilter.php(66): Illuminate\\Routing\\UrlGenerator->route('home')
+#1 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Filters\\HrefFilter.php(36): JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter->makeHref(Array)
+#2 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(197): JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter->transform(Array)
+#3 [internal function]: JeroenNoten\\LaravelAdminLte\\Menu\\Builder->applyFilters(Array)
+#4 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(129): array_map(Array, Array)
+#5 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(45): JeroenNoten\\LaravelAdminLte\\Menu\\Builder->transformItems(Array)
+#6 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLteServiceProvider.php(210): JeroenNoten\\LaravelAdminLte\\Menu\\Builder->add(Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array)
+#7 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php(421): JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider::JeroenNoten\\LaravelAdminLte\\{closure}(Object(JeroenNoten\\LaravelAdminLte\\Events\\BuildingMenu))
+#8 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php(249): Illuminate\\Events\\Dispatcher->Illuminate\\Events\\{closure}('JeroenNoten\\\\Lar...', Array)
+#9 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLte.php(115): Illuminate\\Events\\Dispatcher->dispatch('JeroenNoten\\\\Lar...')
+#10 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLte.php(84): JeroenNoten\\LaravelAdminLte\\AdminLte->buildMenu()
+#11 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\f3d751cdb705843c7fd59f1404383942aba8b359.php(12): JeroenNoten\\LaravelAdminLte\\AdminLte->menu('navbar-left')
+#12 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#14 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#15 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#16 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#19 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#20 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#21 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\3ad03dee8ba7d02cdb5484becb8c0e805d1462ca.php(24): Illuminate\\View\\View->render()
+#22 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#23 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#24 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#25 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#26 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#27 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#28 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#29 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#30 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#31 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\254accca9d987439ed4734782cb3283a60283b25.php(19): Illuminate\\View\\View->render()
+#32 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#33 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#34 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#35 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#36 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#37 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#38 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#39 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#40 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#41 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#42 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#43 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(833): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#44 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(802): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#45 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(725): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#46 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\AuthenticateSession.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\AuthenticateSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#55 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#61 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(726): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#68 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(703): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#69 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(667): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#70 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(656): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#71 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#72 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#73 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#74 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#75 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#76 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#77 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#78 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#79 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#80 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#81 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#82 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#83 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#84 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#85 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#86 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#87 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#88 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#89 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#90 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#91 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#92 C:\\xampp\\htdocs\\ConstructoraDashboard\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#93 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#94 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [home] not defined. at C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Filters\\HrefFilter.php(66): Illuminate\\Routing\\UrlGenerator->route('home')
+#1 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Filters\\HrefFilter.php(36): JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter->makeHref(Array)
+#2 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(197): JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter->transform(Array)
+#3 [internal function]: JeroenNoten\\LaravelAdminLte\\Menu\\Builder->applyFilters(Array)
+#4 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(129): array_map(Array, Array)
+#5 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(45): JeroenNoten\\LaravelAdminLte\\Menu\\Builder->transformItems(Array)
+#6 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLteServiceProvider.php(210): JeroenNoten\\LaravelAdminLte\\Menu\\Builder->add(Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array)
+#7 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php(421): JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider::JeroenNoten\\LaravelAdminLte\\{closure}(Object(JeroenNoten\\LaravelAdminLte\\Events\\BuildingMenu))
+#8 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php(249): Illuminate\\Events\\Dispatcher->Illuminate\\Events\\{closure}('JeroenNoten\\\\Lar...', Array)
+#9 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLte.php(115): Illuminate\\Events\\Dispatcher->dispatch('JeroenNoten\\\\Lar...')
+#10 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLte.php(84): JeroenNoten\\LaravelAdminLte\\AdminLte->buildMenu()
+#11 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\f3d751cdb705843c7fd59f1404383942aba8b359.php(12): JeroenNoten\\LaravelAdminLte\\AdminLte->menu('navbar-left')
+#12 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#14 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#15 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#16 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#19 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#20 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#21 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\3ad03dee8ba7d02cdb5484becb8c0e805d1462ca.php(24): Illuminate\\View\\View->render()
+#22 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#23 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#24 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#25 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#26 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#27 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#28 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#29 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#30 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#31 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\254accca9d987439ed4734782cb3283a60283b25.php(19): Illuminate\\View\\View->render()
+#32 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#33 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#34 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#35 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#36 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#37 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#38 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#39 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#40 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#41 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#42 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#43 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(833): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#44 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(802): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#45 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(725): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#46 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\AuthenticateSession.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\AuthenticateSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#55 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#61 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(726): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#68 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(703): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#69 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(667): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#70 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(656): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#71 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#72 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#73 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#74 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#75 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#76 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#77 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#78 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#79 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#80 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#81 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#82 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#83 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#84 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#85 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#86 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#87 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#88 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#89 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#90 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#91 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#92 C:\\xampp\\htdocs\\ConstructoraDashboard\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#93 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#94 {main}
+"} 
+[2022-08-30 17:17:55] local.ERROR: Route [Home] not defined. {"view":{"view":"C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\resources\\views\\partials\\navbar\\navbar.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-557458906 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#458</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-557458906\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","adminlte":"<pre class=sf-dump id=sf-dump-1299210745 data-indent-pad=\"  \"><span class=sf-dump-note>JeroenNoten\\LaravelAdminLte\\AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref21409 title=\"6 occurrences\">#1409</a><samp data-depth=1 id=sf-dump-1299210745-ref21409 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">menu</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">filters</span>: <span class=sf-dump-note>array:7</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"51 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\GateFilter</span>\"
+    <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"51 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter</span>\"
+    <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"53 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\SearchFilter</span>\"
+    <span class=sf-dump-index>3</span> => \"<span class=sf-dump-str title=\"53 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\ActiveFilter</span>\"
+    <span class=sf-dump-index>4</span> => \"<span class=sf-dump-str title=\"54 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\ClassesFilter</span>\"
+    <span class=sf-dump-index>5</span> => \"<span class=sf-dump-str title=\"51 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\LangFilter</span>\"
+    <span class=sf-dump-index>6</span> => \"<span class=sf-dump-str title=\"51 characters\">JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\DataFilter</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">events</span>: <span class=sf-dump-note title=\"Illuminate\\Events\\Dispatcher
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Events</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Dispatcher</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref226 title=\"5 occurrences\">#26</a><samp data-depth=2 id=sf-dump-1299210745-ref226 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">container</span>: <span class=sf-dump-note title=\"Illuminate\\Foundation\\Application
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Application</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref23 title=\"94 occurrences\">#3</a><samp data-depth=3 id=sf-dump-1299210745-ref23 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">resolved</span>: <span class=sf-dump-note>array:75</span> [ &#8230;75]
+      #<span class=sf-dump-protected title=\"Protected property\">bindings</span>: <span class=sf-dump-note>array:104</span> [ &#8230;104]
+      #<span class=sf-dump-protected title=\"Protected property\">methodBindings</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">instances</span>: <span class=sf-dump-note>array:51</span> [ &#8230;51]
+      #<span class=sf-dump-protected title=\"Protected property\">scopedInstances</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">aliases</span>: <span class=sf-dump-note>array:79</span> [ &#8230;79]
+      #<span class=sf-dump-protected title=\"Protected property\">abstractAliases</span>: <span class=sf-dump-note>array:42</span> [ &#8230;42]
+      #<span class=sf-dump-protected title=\"Protected property\">extenders</span>: <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">tags</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">buildStack</span>: <a class=sf-dump-ref>&amp;</a> []
+      #<span class=sf-dump-protected title=\"Protected property\">with</span>: <a class=sf-dump-ref>&amp;</a> []
+      +<span class=sf-dump-public title=\"Public property\">contextual</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">reboundCallbacks</span>: <span class=sf-dump-note>array:3</span> [ &#8230;3]
+      #<span class=sf-dump-protected title=\"Protected property\">globalBeforeResolvingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">globalResolvingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">globalAfterResolvingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">beforeResolvingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">resolvingCallbacks</span>: <span class=sf-dump-note>array:2</span> [ &#8230;2]
+      #<span class=sf-dump-protected title=\"Protected property\">afterResolvingCallbacks</span>: <span class=sf-dump-note>array:5</span> [ &#8230;5]
+      #<span class=sf-dump-protected title=\"Protected property\">basePath</span>: \"<span class=sf-dump-str title=\"37 characters\">C:\\xampp\\htdocs\\ConstructoraDashboard</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">hasBeenBootstrapped</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">booted</span>: <span class=sf-dump-const>true</span>
+      #<span class=sf-dump-protected title=\"Protected property\">bootingCallbacks</span>: <a class=sf-dump-ref>&amp;</a> <span class=sf-dump-note>array:2</span> [ &#8230;2]
+      #<span class=sf-dump-protected title=\"Protected property\">bootedCallbacks</span>: <a class=sf-dump-ref>&amp;</a> <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      #<span class=sf-dump-protected title=\"Protected property\">terminatingCallbacks</span>: []
+      #<span class=sf-dump-protected title=\"Protected property\">serviceProviders</span>: <a class=sf-dump-ref>&amp;</a> <span class=sf-dump-note>array:35</span> [ &#8230;35]
+      #<span class=sf-dump-protected title=\"Protected property\">loadedProviders</span>: <span class=sf-dump-note>array:35</span> [ &#8230;35]
+      #<span class=sf-dump-protected title=\"Protected property\">deferredServices</span>: <span class=sf-dump-note>array:126</span> [ &#8230;126]
+      #<span class=sf-dump-protected title=\"Protected property\">appPath</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">databasePath</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">langPath</span>: \"<span class=sf-dump-str title=\"42 characters\">C:\\xampp\\htdocs\\ConstructoraDashboard\\lang</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">storagePath</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">environmentPath</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">environmentFile</span>: \"<span class=sf-dump-str title=\"4 characters\">.env</span>\"
+      #<span class=sf-dump-protected title=\"Protected property\">isRunningInConsole</span>: <span class=sf-dump-const>false</span>
+      #<span class=sf-dump-protected title=\"Protected property\">namespace</span>: <span class=sf-dump-const>null</span>
+      #<span class=sf-dump-protected title=\"Protected property\">absoluteCachePathPrefixes</span>: <span class=sf-dump-note>array:2</span> [ &#8230;2]
+    </samp>}
+    #<span class=sf-dump-protected title=\"Protected property\">listeners</span>: <span class=sf-dump-note>array:9</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>composing: adminlte::page</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>JeroenNoten\\LaravelAdminLte\\Events\\BuildingMenu</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Foundation\\Events\\LocaleUpdated</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Log\\Events\\MessageLogged</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Database\\Events\\QueryExecuted</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Queue\\Events\\JobExceptionOccurred</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Queue\\Events\\JobProcessing</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Queue\\Events\\JobProcessed</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+      \"<span class=sf-dump-key>Illuminate\\Auth\\Events\\Registered</span>\" => <span class=sf-dump-note>array:1</span> [ &#8230;1]
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">wildcards</span>: []
+    #<span class=sf-dump-protected title=\"Protected property\">wildcardsCache</span>: <span class=sf-dump-note>array:33</span> [<samp data-depth=3 class=sf-dump-compact>
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\LoadEnvironmentVariables</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\LoadEnvironmentVariables</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\LoadConfiguration</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\LoadConfiguration</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\HandleExceptions</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\HandleExceptions</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\RegisterFacades</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\RegisterFacades</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\RegisterProviders</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\RegisterProviders</span>\" => []
+      \"<span class=sf-dump-key>bootstrapping: Illuminate\\Foundation\\Bootstrap\\BootProviders</span>\" => []
+      \"<span class=sf-dump-key>bootstrapped: Illuminate\\Foundation\\Bootstrap\\BootProviders</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Routing\\Events\\Routing</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Routing\\Events\\RouteMatched</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Database\\Events\\StatementPrepared</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Database\\Events\\QueryExecuted</span>\" => []
+      \"<span class=sf-dump-key>eloquent.booting: App\\Models\\User</span>\" => []
+      \"<span class=sf-dump-key>eloquent.booted: App\\Models\\User</span>\" => []
+      \"<span class=sf-dump-key>eloquent.retrieved: App\\Models\\User</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Auth\\Events\\Authenticated</span>\" => []
+      \"<span class=sf-dump-key>creating: dash.index</span>\" => []
+      \"<span class=sf-dump-key>composing: dash.index</span>\" => []
+      \"<span class=sf-dump-key>creating: adminlte::page</span>\" => []
+      \"<span class=sf-dump-key>composing: adminlte::page</span>\" => []
+      \"<span class=sf-dump-key>JeroenNoten\\LaravelAdminLte\\Events\\ReadingDarkModePreference</span>\" => []
+      \"<span class=sf-dump-key>creating: adminlte::partials.common.preloader</span>\" => []
+      \"<span class=sf-dump-key>composing: adminlte::partials.common.preloader</span>\" => []
+      \"<span class=sf-dump-key>creating: adminlte::partials.navbar.navbar</span>\" => []
+      \"<span class=sf-dump-key>composing: adminlte::partials.navbar.navbar</span>\" => []
+      \"<span class=sf-dump-key>creating: adminlte::partials.navbar.menu-item-left-sidebar-toggler</span>\" => []
+      \"<span class=sf-dump-key>composing: adminlte::partials.navbar.menu-item-left-sidebar-toggler</span>\" => []
+      \"<span class=sf-dump-key>JeroenNoten\\LaravelAdminLte\\Events\\BuildingMenu</span>\" => []
+      \"<span class=sf-dump-key>Illuminate\\Auth\\Access\\Events\\GateEvaluated</span>\" => []
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">queueResolver</span>: <span class=sf-dump-note>Closure()</span> {<a class=sf-dump-ref>#27</a><samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-meta>class</span>: \"<span class=sf-dump-str title=\"Illuminate\\Events\\EventServiceProvider
+38 characters\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-class\">Illuminate\\Events</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-class\">\\</span>EventServiceProvider</span>\"
+      <span class=sf-dump-meta>this</span>: <span class=sf-dump-note title=\"Illuminate\\Events\\EventServiceProvider
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Events</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>EventServiceProvider</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref25 title=\"3 occurrences\">#5</a> &#8230;}
+      <span class=sf-dump-meta>use</span>: { &#8230;1}
+      <span class=sf-dump-meta>file</span>: \"<span class=sf-dump-str title=\"C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\EventServiceProvider.php
+109 characters\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">\\laravel\\framework\\</span>src\\Illuminate\\Events\\EventServiceProvider.php</span>\"
+      <span class=sf-dump-meta>line</span>: \"<span class=sf-dump-str title=\"8 characters\">18 to 20</span>\"
+    </samp>}
+  </samp>}
+  #<span class=sf-dump-protected title=\"Protected property\">container</span>: <span class=sf-dump-note title=\"Illuminate\\Foundation\\Application
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Foundation</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Application</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref23 title=\"94 occurrences\">#3</a>}
+  #<span class=sf-dump-protected title=\"Protected property\">menuFilterMap</span>: <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>sidebar</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"JeroenNoten\\LaravelAdminLte\\AdminLte
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">JeroenNoten\\LaravelAdminLte</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref21409 title=\"6 occurrences\">#1409</a>}
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">sidebarFilter</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>navbar-left</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"JeroenNoten\\LaravelAdminLte\\AdminLte
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">JeroenNoten\\LaravelAdminLte</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref21409 title=\"6 occurrences\">#1409</a>}
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"16 characters\">navbarLeftFilter</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>navbar-right</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"JeroenNoten\\LaravelAdminLte\\AdminLte
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">JeroenNoten\\LaravelAdminLte</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref21409 title=\"6 occurrences\">#1409</a>}
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"17 characters\">navbarRightFilter</span>\"
+    </samp>]
+    \"<span class=sf-dump-key>navbar-user</span>\" => <span class=sf-dump-note>array:2</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"JeroenNoten\\LaravelAdminLte\\AdminLte
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">JeroenNoten\\LaravelAdminLte</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>AdminLte</span> {<a class=sf-dump-ref href=#sf-dump-1299210745-ref21409 title=\"6 occurrences\">#1409</a>}
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"20 characters\">navbarUserMenuFilter</span>\"
+    </samp>]
+  </samp>]
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1299210745\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","layoutHelper":"<pre class=sf-dump id=sf-dump-832462844 data-indent-pad=\"  \"><span class=sf-dump-note>JeroenNoten\\LaravelAdminLte\\Helpers\\LayoutHelper</span> {<a class=sf-dump-ref>#1408</a>}
+</pre><script>Sfdump(\"sf-dump-832462844\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":1,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [Home] not defined. at C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Filters\\HrefFilter.php(66): Illuminate\\Routing\\UrlGenerator->route('Home')
+#1 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Filters\\HrefFilter.php(36): JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter->makeHref(Array)
+#2 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(197): JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter->transform(Array)
+#3 [internal function]: JeroenNoten\\LaravelAdminLte\\Menu\\Builder->applyFilters(Array)
+#4 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(129): array_map(Array, Array)
+#5 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(45): JeroenNoten\\LaravelAdminLte\\Menu\\Builder->transformItems(Array)
+#6 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLteServiceProvider.php(210): JeroenNoten\\LaravelAdminLte\\Menu\\Builder->add(Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array)
+#7 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php(421): JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider::JeroenNoten\\LaravelAdminLte\\{closure}(Object(JeroenNoten\\LaravelAdminLte\\Events\\BuildingMenu))
+#8 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php(249): Illuminate\\Events\\Dispatcher->Illuminate\\Events\\{closure}('JeroenNoten\\\\Lar...', Array)
+#9 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLte.php(115): Illuminate\\Events\\Dispatcher->dispatch('JeroenNoten\\\\Lar...')
+#10 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLte.php(84): JeroenNoten\\LaravelAdminLte\\AdminLte->buildMenu()
+#11 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\f3d751cdb705843c7fd59f1404383942aba8b359.php(12): JeroenNoten\\LaravelAdminLte\\AdminLte->menu('navbar-left')
+#12 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#14 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#15 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#16 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#19 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#20 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#21 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\3ad03dee8ba7d02cdb5484becb8c0e805d1462ca.php(24): Illuminate\\View\\View->render()
+#22 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#23 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#24 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#25 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#26 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#27 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#28 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#29 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#30 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#31 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\254accca9d987439ed4734782cb3283a60283b25.php(19): Illuminate\\View\\View->render()
+#32 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#33 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#34 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#35 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#36 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#37 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#38 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#39 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#40 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#41 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#42 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#43 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(833): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#44 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(802): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#45 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(725): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#46 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\AuthenticateSession.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\AuthenticateSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#55 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#61 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(726): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#68 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(703): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#69 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(667): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#70 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(656): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#71 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#72 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#73 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#74 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#75 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#76 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#77 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#78 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#79 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#80 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#81 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#82 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#83 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#84 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#85 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#86 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#87 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#88 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#89 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#90 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#91 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#92 C:\\xampp\\htdocs\\ConstructoraDashboard\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#93 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#94 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [Home] not defined. at C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Filters\\HrefFilter.php(66): Illuminate\\Routing\\UrlGenerator->route('Home')
+#1 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Filters\\HrefFilter.php(36): JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter->makeHref(Array)
+#2 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(197): JeroenNoten\\LaravelAdminLte\\Menu\\Filters\\HrefFilter->transform(Array)
+#3 [internal function]: JeroenNoten\\LaravelAdminLte\\Menu\\Builder->applyFilters(Array)
+#4 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(129): array_map(Array, Array)
+#5 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\Menu\\Builder.php(45): JeroenNoten\\LaravelAdminLte\\Menu\\Builder->transformItems(Array)
+#6 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLteServiceProvider.php(210): JeroenNoten\\LaravelAdminLte\\Menu\\Builder->add(Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array, Array)
+#7 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php(421): JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider::JeroenNoten\\LaravelAdminLte\\{closure}(Object(JeroenNoten\\LaravelAdminLte\\Events\\BuildingMenu))
+#8 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\Dispatcher.php(249): Illuminate\\Events\\Dispatcher->Illuminate\\Events\\{closure}('JeroenNoten\\\\Lar...', Array)
+#9 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLte.php(115): Illuminate\\Events\\Dispatcher->dispatch('JeroenNoten\\\\Lar...')
+#10 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\jeroennoten\\laravel-adminlte\\src\\AdminLte.php(84): JeroenNoten\\LaravelAdminLte\\AdminLte->buildMenu()
+#11 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\f3d751cdb705843c7fd59f1404383942aba8b359.php(12): JeroenNoten\\LaravelAdminLte\\AdminLte->menu('navbar-left')
+#12 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#14 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#15 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#16 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#19 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#20 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#21 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\3ad03dee8ba7d02cdb5484becb8c0e805d1462ca.php(24): Illuminate\\View\\View->render()
+#22 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#23 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#24 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#25 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#26 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#27 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#28 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#29 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#30 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#31 C:\\xampp\\htdocs\\ConstructoraDashboard\\storage\\framework\\views\\254accca9d987439ed4734782cb3283a60283b25.php(19): Illuminate\\View\\View->render()
+#32 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(109): require('C:\\\\xampp\\\\htdocs...')
+#33 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(110): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#34 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#35 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(69): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#36 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Livewire\\LivewireViewCompilerEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#37 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php(35): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#38 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Livewire\\LivewireViewCompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#39 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#40 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#41 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#42 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#43 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(833): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#44 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(802): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#45 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(725): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#46 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\EnsureEmailIsVerified->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\AuthenticateSession.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\AuthenticateSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#55 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#57 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#58 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#61 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#64 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#65 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#66 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#67 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(726): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#68 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(703): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#69 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(667): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#70 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(656): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#71 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#72 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#73 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#74 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#75 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#76 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#77 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#78 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#79 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#80 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#81 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#82 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#83 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#84 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#85 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#86 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#87 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#88 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#89 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#90 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#91 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#92 C:\\xampp\\htdocs\\ConstructoraDashboard\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#93 C:\\xampp\\htdocs\\ConstructoraDashboard\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\xampp\\\\htdocs...')
+#94 {main}
+"} 
